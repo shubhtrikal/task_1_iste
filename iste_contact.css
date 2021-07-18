@@ -1,0 +1,147 @@
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+    outline   : none;
+}
+.main{
+    width: 100%;
+    min-height: 100%;
+    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+    linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+    linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+    padding: 150px 0;
+}
+.container{
+    /* margin-top: 100px; */
+    background-color: white;
+    width: 60%;
+    margin-left: 20%;
+    padding: 50px;
+}
+.text {
+    width         : 100%;
+    height        : 10vh;
+    font-size     : 50px;
+    font-weight   : 900;
+    text-align    : center;
+    /* margin     : 20px; */
+}
+
+.form {
+    display        : flex;
+    justify-content: space-around;
+    /* width: 70%;
+    margin: 0 15%; */
+}
+
+.left {
+    width: 30%;
+}
+
+.right {
+    width: 30%;
+}
+
+.data {
+    margin-top: 40px;
+}
+
+.data input,
+.data select {
+    border       : none;
+    border-bottom: 2px solid black;
+    width        : 100%;
+}
+
+.data label {
+    position : relative;
+    bottom   : 25px;
+    font-size: 20px;
+    color    : gray;
+}
+
+.adress {
+    display        : flex;
+    justify-content: space-between;
+}
+
+.data input:focus~label,
+.data input:valid~label {
+    bottom   : 50px;
+    font-size: 17px;
+    color    : #3498db;
+}
+
+.data label {
+    pointer-events: none;
+    bottom        : 30px;
+    transition    : all 0.3s ease;
+}
+
+.data input {
+    font-size: 20px;
+}
+
+.line {
+    position : relative;
+    height   : 2px;
+    width    : 100%;
+    bottom   : 2px;
+    transform: scaleX(0);
+}
+
+.data input:focus~.line,
+.data input:valid~.line {
+    transform-origin: center;
+    transition      : transform 0.3s;
+    background-color: #3498db;
+    transform       : scaleX(1);
+}
+.data_btn{
+    margin-top: 30px;
+}
+.data_btn input{
+    border: none;
+    border: 2px solid #3498db;
+    padding: 5px;
+    font-size: 20px;
+    width: 100%;
+    background: none;
+    cursor: pointer;
+    color: #3498db;
+    transition: .5s;
+}
+.data_btn input:hover{
+    color: white;
+}
+.data_btn input:hover{
+    background-color: #3498db;
+    transform-origin: center;
+    transition      : 0.3s;
+}
+@media (max-width: 900px){
+    .container{
+        margin: 10%;
+        width: 80%;
+    }
+    .form{
+        flex-direction: column;
+        position: relative;
+        margin-top: 80px;
+    }
+    .left{
+        width: 80%;
+    }
+    .right{
+        width: 80%;
+    }
+}
+@media (max-width: 670px){
+    #ref label{
+        bottom: 50px;
+    }
+    #ref input:focus~label, #ref input:valid~label{
+        bottom: 70px;
+    }
+}
